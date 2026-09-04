@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jerome Patrick — Service Designer & Product Builder</title>
+  <title>Jerome Patrick Jr. — Civic AI Product Builder</title>
+  <meta name="description" content="Civic AI Product Builder working across service design, systems thinking, AI, data, and rapid prototyping to turn complicated real-world problems into working products." />
+  <meta property="og:title" content="Jerome Patrick Jr. — Civic AI Product Builder" />
+  <meta property="og:description" content="I find messy, real-world problems, understand the systems underneath them, and build working products with service design, AI, data, and rapid prototyping." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -15,6 +19,9 @@
       --chalk: #F5F4F0;
       --rust: #C8390A;
       --grape: #6D28D9;
+      --amber: #0A76B7;
+      --teal: #0F766E;
+      --coral: #BE185D;
       --slate: #6B7280;
       --rule: #E2E0DB;
       --white: #ffffff;
@@ -257,6 +264,41 @@
       line-height: 1.7;
     }
 
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .about-body p {
+      font-size: 1rem;
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    .about-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: 12px;
+      filter: grayscale(8%);
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -281,8 +323,9 @@
 
     .card-top {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: flex-start;
+      gap: 0.4rem;
     }
 
     .card-status {
@@ -322,6 +365,14 @@
       color: var(--slate);
     }
 
+    .local-cosmos-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A8A29E;
+    }
+
     .card-name {
       font-family: 'DM Serif Display', serif;
       font-size: 1.75rem;
@@ -331,6 +382,9 @@
 
     .card-name.rust { color: var(--rust); }
     .card-name.grape { color: var(--grape); }
+    .card-name.amber { color: var(--amber); }
+    .card-name.teal { color: var(--teal); }
+    .card-name.coral { color: var(--coral); }
 
     .card-desc {
       font-size: 0.9rem;
@@ -386,22 +440,6 @@
       height: 14px;
     }
 
-    /* enterprise card */
-    .project-card.enterprise {
-      grid-column: 1 / -1;
-      flex-direction: row;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .enterprise-content { flex: 1; }
-    .enterprise-meta { 
-      flex: 0 0 220px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
     /* CRAFT */
     .craft-bg {
       background: var(--ink);
@@ -419,11 +457,43 @@
     .craft-bg .section-label::after { background: #1F2937; }
     .craft-bg .section-heading { color: var(--chalk); }
 
+    .craft-header {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 3rem;
+      align-items: end;
+    }
+
+    .craft-photo-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .craft-photo {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 12px;
+      border: 1px solid #1F2937;
+      filter: grayscale(15%);
+    }
+
+    .operating-loop {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #6B7280;
+      margin-top: 2.5rem;
+    }
+
     .principles {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 1.75rem;
     }
 
     .principle {
@@ -511,12 +581,49 @@
       color: var(--ink);
     }
 
+    .tool-tag-secondary {
+      background: transparent;
+      border: 1px solid var(--rule);
+      color: var(--slate);
+      font-size: 0.68rem;
+    }
+
+    .subsection-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+
     /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
     .contact-wrap {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 2rem;
+    }
+
+    .contact-photo-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .contact-photo {
+      width: 100%;
+      max-width: 300px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center 15%;
+      border-radius: 12px;
+      filter: grayscale(8%);
     }
 
     .contact-heading {
@@ -628,13 +735,18 @@
         padding: 6rem 1.25rem 4rem;
       }
       .hero-photo-wrap { display: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-photo-wrap { justify-content: flex-start; order: 2; }
+      .contact-photo { max-width: 220px; }
+      .about-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+      .about-photo-wrap { justify-content: flex-start; }
+      .about-photo { max-width: 280px; }
+      .craft-header { grid-template-columns: 1fr; gap: 1.5rem; }
+      .craft-photo-wrap { justify-content: flex-start; }
+      .craft-photo { max-width: 200px; }
+      .operating-loop { font-size: 0.68rem; letter-spacing: 0.03em; }
       section { padding: 4rem 1.25rem; }
       .craft-inner { padding: 0 1.25rem; }
-      .project-card.enterprise {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-      .enterprise-meta { flex: unset; width: 100%; flex-direction: row; flex-wrap: wrap; }
       footer { padding: 1.5rem 1.25rem; flex-direction: column; gap: 1rem; text-align: center; }
       .full-rule { margin: 0 1.25rem; }
     }
@@ -662,12 +774,10 @@
     <div class="hero">
       <div class="hero-content">
         <p class="hero-eyebrow">Jerome Patrick — Fredericksburg, VA</p>
-        <h1 class="hero-name">Service<br>Designer.</h1>
+        <h1 class="hero-name">Civic AI<br>Product Builder.</h1>
         <p class="hero-thesis">
-          <em>Military systems operator turned service designer who builds what he designs.</em>
-          A decade redesigning how complex organizations serve people —
-          from Navy personnel systems to AI tools shipped inside federal agencies
-          to live marketplace startups founded from nothing.
+          I find messy, real-world problems, understand the systems underneath them,
+          and build working products with service design, AI, data, and rapid prototyping.
         </p>
         <div class="hero-pills">
           <a href="https://story-goggles--jeromepatrickjr.replit.app/" target="_blank" class="pill pill-grape">
@@ -676,7 +786,7 @@
           <a href="https://www.trukfoo.com" target="_blank" class="pill pill-rust">
             <span class="pulse"></span> Trukfoo — In Production
           </a>
-          <a href="#contact" class="pill pill-outline">Available for consulting</a>
+          <a href="#contact" class="pill pill-outline">Open to AI + Product Work</a>
         </div>
       </div>
       <div class="hero-photo-wrap">
@@ -696,8 +806,8 @@
     <p class="section-label">Work</p>
     <h2 class="section-heading">Live projects.<br>Real stakes.</h2>
     <p class="work-intro">
-      These aren't case studies. They're products in production —
-      used by real people, run by real teams, built by hand.
+      Not case studies — products, systems, and prototypes at different stages
+      of the same process: discovered, designed, built, and put into the real world.
     </p>
 
     <div class="projects-grid">
@@ -741,6 +851,7 @@
         <div class="card-top">
           <span class="card-status"><span class="status-dot"></span> In Production</span>
           <span class="card-type">Marketplace · Startup</span>
+          <span class="local-cosmos-tag">Part of Local Cosmos</span>
         </div>
         <h3 class="card-name rust">Trukfoo</h3>
         <p class="card-desc">
@@ -771,49 +882,202 @@
         </a>
       </div>
 
-      <!-- USPS Enterprise -->
-      <div class="project-card enterprise">
-        <div class="enterprise-content">
-          <div class="card-top" style="margin-bottom:1rem;">
-            <span class="card-type">Enterprise Service Design · Federal</span>
-          </div>
-          <h3 class="card-name" style="margin-bottom:1rem;">USPS Passport Service Redesign</h3>
-          <p class="card-desc">
-            Evaluated the USPS passport appointment service end to end. Developed current-state
-            and future-state service maps that identified friction across scheduling, mobile usability,
-            and error recovery. Prototyped redesigned workflows and facilitated stakeholder review
-            sessions with business, IT, and customer-facing teams to validate improvements.
-          </p>
+      <!-- LOIS -->
+      <div class="project-card">
+        <div class="card-top">
+          <span class="card-status"><span class="status-dot"></span> In Development</span>
+          <span class="card-type">AI · Local Intelligence</span>
+          <span class="local-cosmos-tag">Part of Local Cosmos</span>
         </div>
-        <div class="enterprise-meta">
+        <h3 class="card-name teal">LOIS</h3>
+        <p class="card-desc">
+          The Local Operating Intelligence System — the data and AI infrastructure at the
+          center of Local Cosmos, a local-discovery ecosystem connecting communities to
+          events, businesses, and experiences. LOIS pairs AI-driven collection with
+          on-the-ground "Localist" relationships to surface information algorithms alone miss.
+        </p>
+        <div class="card-stats">
           <div class="stat">
-            <span class="stat-number" style="font-size:1.1rem;">Current State → Future State</span>
+            <span class="stat-number">5</span>
+            <span class="stat-label">Products in family</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" style="font-size:1.1rem;">Culpeper Competes</span>
+            <span class="stat-label">Selected Cohort</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">2026</span>
+            <span class="stat-label">Founded</span>
+          </div>
+        </div>
+        <a href="https://meetlois.com" target="_blank" class="card-link">
+          Visit meetlois.com
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- FestiveFly -->
+      <div class="project-card">
+        <div class="card-top">
+          <span class="card-status"><span class="status-dot"></span> In Development</span>
+          <span class="card-type">Civic SaaS · Event Discovery</span>
+          <span class="local-cosmos-tag">Part of Local Cosmos</span>
+        </div>
+        <h3 class="card-name coral">FestiveFly</h3>
+        <p class="card-desc">
+          A community experience platform connecting residents, vendors, organizers, and
+          municipalities around local events and festivals. Built as a network-effect pair
+          with Trukfoo — one flywheel for food trucks, one for the festivals and fairs
+          around them — with early county partnerships already underway in Virginia.
+        </p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-number" style="font-size:1.1rem;">Culpeper Competes</span>
+            <span class="stat-label">Selected Cohort</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Counties engaged</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">2025</span>
+            <span class="stat-label">Founded</span>
+          </div>
+        </div>
+        <a href="https://festivefly.com" target="_blank" class="card-link">
+          Visit festivefly.com
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Custobee -->
+      <div class="project-card">
+        <div class="card-top">
+          <span class="card-status"><span class="status-dot"></span> In Development</span>
+          <span class="card-type">Logistics · Patent-Pending</span>
+        </div>
+        <h3 class="card-name amber">Custobee</h3>
+        <p class="card-desc">
+          Born from a personal package theft in 2018, Custobee has grown into the Safe Haven
+          Network — a multi-carrier system for secure package storage, routing, and recipient
+          pickup, with a patent-pending return-to-resale extension that turns reverse
+          logistics into local commerce. Hofstra Veteran Ventures Challenge semifinalist.
+        </p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Provisional patents</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">2020</span>
+            <span class="stat-label">Hofstra semifinalist</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">2018</span>
+            <span class="stat-label">Founded</span>
+          </div>
+        </div>
+        <a href="https://www.figma.com/proto/EGLJyu5QvZWKGARqYnJpxQ/CustoBee?node-id=277-3310&starting-point-node-id=277%3A3310" target="_blank" class="card-link">
+          Open the live prototype
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- USPS Passport -->
+      <div class="project-card">
+        <div class="card-top">
+          <span class="card-status"><span class="status-dot"></span> Prototyped</span>
+          <span class="card-type">Service Design · Federal</span>
+        </div>
+        <h3 class="card-name">USPS Passport Service Redesign</h3>
+        <p class="card-desc">
+          Evaluated the USPS passport appointment service end to end. Developed current-state
+          and future-state service maps that identified friction across scheduling, mobile usability,
+          and error recovery. Prototyped redesigned workflows and facilitated stakeholder review
+          sessions with business, IT, and customer-facing teams to validate improvements.
+        </p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-number" style="font-size:1.1rem;">Current → Future</span>
             <span class="stat-label">Service Mapping</span>
           </div>
           <div class="stat">
-            <span class="stat-number" style="font-size:1.1rem;">HCD · Salesforce · Stakeholder Facilitation</span>
+            <span class="stat-number" style="font-size:1.1rem;">HCD · Salesforce</span>
             <span class="stat-label">Methods</span>
           </div>
         </div>
+        <a href="https://chat-check-78201000.figma.site" target="_blank" class="card-link">
+          Open the live prototype
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
       </div>
 
+    </div>
+  </section>
+
+  <hr class="full-rule" />
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <h2 class="section-heading">The throughline.</h2>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>
+          I learned early in the Navy to look beyond the immediate problem and understand
+          the system around it. That instinct followed me into service design, where I
+          became interested not only in what people experience, but in the operations,
+          relationships, and decisions creating that experience.
+        </p>
+        <p>
+          Over time, understanding the system naturally led to building. I wanted to
+          carry the work further — from discovery and design into products that could
+          be tested in the real world.
+        </p>
+        <p>
+          AI has expanded what I can prototype, build, and test directly, shortening
+          the distance between an idea and something people can actually use. The
+          throughline is still the same: understand how complicated things work, then
+          make them work better for the people inside them.
+        </p>
+      </div>
+      <div class="about-photo-wrap">
+        <img src="assets/jp-navy.jpg" alt="Jerome Patrick holding his Navy retirement shadow box, 22 years of service" class="about-photo" />
+      </div>
     </div>
   </section>
 
   <!-- CRAFT -->
   <div class="craft-bg" id="craft">
     <div class="craft-inner">
-      <p class="section-label">Craft</p>
-      <h2 class="section-heading">How I work.</h2>
+      <div class="craft-header">
+        <div class="craft-header-text">
+          <p class="section-label">Craft</p>
+          <h2 class="section-heading">How I work.</h2>
+        </div>
+        <div class="craft-photo-wrap">
+          <img src="assets/jp-at-work.jpg" alt="Jerome Patrick at his desk, working" class="craft-photo" />
+        </div>
+      </div>
+
+      <p class="operating-loop">Discover → Design → Build → Deploy → Learn</p>
+
       <div class="principles">
 
         <div class="principle">
           <p class="principle-num">I</p>
-          <h3 class="principle-title">Research first, always.</h3>
+          <h3 class="principle-title">Research feeds the build.</h3>
           <p class="principle-body">
-            Every product decision is grounded in what real people actually do —
-            not what they say they'll do. Discovery research, journey mapping,
-            and co-creation workshops aren't deliverables. They're how I think.
+            Research isn't where the work ends. What I learn shapes what gets built,
+            what gets deployed, and what I learn next.
           </p>
         </div>
 
@@ -882,29 +1146,45 @@
         <p class="cred-name">HTML & CSS</p>
         <p class="cred-year">2021</p>
       </div>
-      <div class="cred-item" style="border-color: #22c55e33; background: #f0fdf4;">
-        <p class="cred-issuer" style="color:#15803d;">U.S. Government</p>
-        <p class="cred-name">Active Secret Clearance</p>
-        <p class="cred-year" style="color:#15803d;">Current</p>
-      </div>
     </div>
 
     <div style="margin-top:3rem;">
-      <p class="section-label">Tools</p>
+      <p class="section-label">What I Do</p>
       <div class="tools-row">
-        <span class="tool-tag">Figma</span>
-        <span class="tool-tag">Miro</span>
-        <span class="tool-tag">Mural</span>
-        <span class="tool-tag">Airtable</span>
-        <span class="tool-tag">Salesforce</span>
-        <span class="tool-tag">Adobe Creative Suite</span>
-        <span class="tool-tag">Make / Zapier</span>
-        <span class="tool-tag">React</span>
-        <span class="tool-tag">TypeScript</span>
-        <span class="tool-tag">Node.js</span>
-        <span class="tool-tag">HTML / CSS</span>
+        <span class="tool-tag">Product Strategy</span>
+        <span class="tool-tag">Service Design</span>
+        <span class="tool-tag">Systems Thinking</span>
+        <span class="tool-tag">AI Product Development</span>
+        <span class="tool-tag">Rapid Prototyping</span>
+        <span class="tool-tag">Workflow Design</span>
+        <span class="tool-tag">Data & Information Modeling</span>
+        <span class="tool-tag">Stakeholder Facilitation</span>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;">
+      <p class="section-label">What I Build With</p>
+      <div class="tools-row">
+        <span class="tool-tag">Claude</span>
+        <span class="tool-tag">ChatGPT</span>
+        <span class="tool-tag">Supabase</span>
+        <span class="tool-tag">GitHub</span>
         <span class="tool-tag">Replit</span>
-        <span class="tool-tag">Railway</span>
+        <span class="tool-tag">Airtable</span>
+        <span class="tool-tag">n8n</span>
+        <span class="tool-tag">Figma</span>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem;">
+      <p class="subsection-label">Additional Technical Experience</p>
+      <div class="tools-row" style="margin-top:1rem;">
+        <span class="tool-tag tool-tag-secondary">React</span>
+        <span class="tool-tag tool-tag-secondary">TypeScript</span>
+        <span class="tool-tag tool-tag-secondary">Node.js</span>
+        <span class="tool-tag tool-tag-secondary">HTML / CSS</span>
+        <span class="tool-tag tool-tag-secondary">Salesforce</span>
+        <span class="tool-tag tool-tag-secondary">Railway</span>
       </div>
     </div>
   </section>
@@ -914,19 +1194,24 @@
   <!-- CONTACT -->
   <section id="contact">
     <p class="section-label">Contact</p>
-    <div class="contact-wrap">
-      <h2 class="contact-heading">Let's build something worth using.</h2>
-      <p class="contact-sub">
-        Available for service design consulting, AI product work,
-        and collaborations that solve real problems for real people.
-      </p>
-      <div class="contact-links">
-        <a href="mailto:jeromepatrickjr@gmail.com" class="btn-primary">
-          Send an email
-        </a>
-        <a href="https://linkedin.com/in/jeromepatrickjr" target="_blank" class="btn-secondary">
-          LinkedIn
-        </a>
+    <div class="contact-grid">
+      <div class="contact-wrap">
+        <h2 class="contact-heading">Let's build something worth using.</h2>
+        <p class="contact-sub">
+          I'm interested in AI products, civic technology, service systems,
+          and complicated real-world problems that need more than another slide deck.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:jeromepatrickjr@gmail.com" class="btn-primary">
+            Send an email
+          </a>
+          <a href="https://linkedin.com/in/jeromepatrickjr" target="_blank" class="btn-secondary">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="contact-photo-wrap">
+        <img src="assets/jp-contact.jpg" alt="Jerome Patrick smiling" class="contact-photo" />
       </div>
     </div>
   </section>
@@ -934,10 +1219,6 @@
   <!-- FOOTER -->
   <footer>
     <p class="footer-copy">© 2026 Jerome Patrick Jr. · jpatrickjr.com</p>
-    <span class="footer-clearance">
-      <span class="clearance-dot"></span>
-      Active Secret Clearance
-    </span>
   </footer>
 
 </body>
