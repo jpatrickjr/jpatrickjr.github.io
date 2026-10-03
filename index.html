@@ -3,823 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jerome Patrick Jr. — Civic AI Product Builder</title>
-  <meta name="description" content="Civic AI Product Builder working across service design, systems thinking, AI, data, and rapid prototyping to turn complicated real-world problems into working products." />
-  <meta property="og:title" content="Jerome Patrick Jr. — Civic AI Product Builder" />
-  <meta property="og:description" content="I find messy, real-world problems, understand the systems underneath them, and build working products with service design, AI, data, and rapid prototyping." />
+  <title>Jerome Patrick Jr. — Civic Product Architect &amp; Founder of Local Cosmos</title>
+  <meta name="description" content="Jerome Patrick Jr. is a Civic Product Architect working across design, technology, AI, and local economies. Founder of Local Cosmos." />
+  <link rel="canonical" href="https://jpatrickjr.github.io/" />
+  <meta name="theme-color" content="#F5F4F0" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jerome Patrick Jr." />
+  <meta property="og:url" content="https://jpatrickjr.github.io/" />
+  <meta property="og:title" content="Jerome Patrick Jr. — Civic Product Architect &amp; Founder of Local Cosmos" />
+  <meta property="og:description" content="Jerome Patrick Jr. is a Civic Product Architect working across design, technology, AI, and local economies. Founder of Local Cosmos." />
+  <meta property="og:image" content="https://jpatrickjr.github.io/Assets/og-home.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Jerome Patrick Jr. — Design × Technology × Local Economies" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jerome Patrick Jr. — Civic Product Architect &amp; Founder of Local Cosmos" />
+  <meta name="twitter:description" content="Civic Product Architect working across design, technology, AI, and local economies. Founder of Local Cosmos." />
+  <meta name="twitter:image" content="https://jpatrickjr.github.io/Assets/og-home.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ink: #111318;
-      --chalk: #F5F4F0;
-      --rust: #C8390A;
-      --grape: #6D28D9;
-      --amber: #0A76B7;
-      --teal: #0F766E;
-      --coral: #BE185D;
-      --slate: #6B7280;
-      --rule: #E2E0DB;
-      --white: #ffffff;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--chalk);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 2.5rem;
-      background: rgba(245, 244, 240, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .nav-mark {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--slate);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--ink); }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 4rem;
-      align-items: flex-end;
-      padding: 0 2.5rem 5rem;
-      padding-top: 6rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .hero-photo-wrap {
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-    }
-
-    .hero-photo {
-      width: 340px;
-      height: 420px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 12px;
-      filter: grayscale(8%);
-    }
-
-    .hero-eyebrow {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 2rem;
-      height: 1px;
-      background: var(--slate);
-    }
-
-    .hero-name {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(3.5rem, 8vw, 7.5rem);
-      line-height: 1;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      margin-bottom: 2rem;
-    }
-
-    .hero-thesis {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      font-weight: 300;
-      color: var(--slate);
-      max-width: 52ch;
-      line-height: 1.7;
-      margin-bottom: 3rem;
-    }
-
-    .hero-thesis em {
-      font-style: normal;
-      color: var(--ink);
-      font-weight: 500;
-    }
-
-    .hero-pills {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.45rem 1rem;
-      border-radius: 999px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 500;
-      transition: opacity 0.2s;
-    }
-
-    .pill:hover { opacity: 0.75; }
-
-    .pill-rust {
-      background: var(--rust);
-      color: var(--white);
-    }
-
-    .pill-grape {
-      background: var(--grape);
-      color: var(--white);
-    }
-
-    .pill-outline {
-      background: transparent;
-      color: var(--ink);
-      border: 1.5px solid var(--ink);
-    }
-
-    .pulse {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: currentColor;
-      position: relative;
-      flex-shrink: 0;
-    }
-
-    .pulse::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: 0.35;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.35; }
-      50% { transform: scale(1.8); opacity: 0; }
-    }
-
-    /* SECTION SHARED */
-    section {
-      padding: 6rem 2.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: 3rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
-
-    .section-heading {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 1rem;
-    }
-
-    /* WORK */
-    .work-intro {
-      font-size: 1rem;
-      color: var(--slate);
-      max-width: 52ch;
-      margin-bottom: 3.5rem;
-      line-height: 1.7;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .about-body {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .about-body p {
-      font-size: 1rem;
-      color: var(--ink);
-      line-height: 1.75;
-    }
-
-    .about-photo-wrap {
-      display: flex;
-      justify-content: center;
-    }
-
-    .about-photo {
-      width: 100%;
-      max-width: 440px;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      object-position: center 30%;
-      border-radius: 12px;
-      filter: grayscale(8%);
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--white);
-      border: 1px solid var(--rule);
-      border-radius: 12px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(17,19,24,0.08);
-    }
-
-    .card-top {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.4rem;
-    }
-
-    .card-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-    }
-
-    .status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #22c55e;
-      position: relative;
-    }
-
-    .status-dot::after {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 50%;
-      background: #22c55e;
-      opacity: 0.3;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    .card-type {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-    }
-
-    .local-cosmos-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #A8A29E;
-    }
-
-    .card-name {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.75rem;
-      line-height: 1.1;
-      color: var(--ink);
-    }
-
-    .card-name.rust { color: var(--rust); }
-    .card-name.grape { color: var(--grape); }
-    .card-name.amber { color: var(--amber); }
-    .card-name.teal { color: var(--teal); }
-    .card-name.coral { color: var(--coral); }
-
-    .card-desc {
-      font-size: 0.9rem;
-      color: var(--slate);
-      line-height: 1.65;
-      flex: 1;
-    }
-
-    .card-stats {
-      display: flex;
-      gap: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--rule);
-    }
-
-    .stat {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .stat-number {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.5rem;
-      line-height: 1;
-      color: var(--ink);
-    }
-
-    .stat-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-    }
-
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--ink);
-      text-decoration: none;
-      margin-top: 0.5rem;
-      transition: gap 0.2s;
-    }
-
-    .card-link:hover { gap: 0.7rem; }
-
-    .card-link svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    .card-source-link {
-      display: block;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.02em;
-      color: var(--slate);
-      text-decoration: none;
-      margin-top: 0.6rem;
-    }
-
-    .card-source-link:hover { color: var(--ink); }
-
-    /* CRAFT */
-    .craft-bg {
-      background: var(--ink);
-      max-width: 100%;
-      padding: 6rem 0;
-    }
-
-    .craft-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2.5rem;
-    }
-
-    .craft-bg .section-label { color: #4B5563; }
-    .craft-bg .section-label::after { background: #1F2937; }
-    .craft-bg .section-heading { color: var(--chalk); }
-
-    .craft-header {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 3rem;
-      align-items: end;
-    }
-
-    .craft-photo-wrap {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .craft-photo {
-      width: 100%;
-      max-width: 280px;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: center 20%;
-      border-radius: 12px;
-      border: 1px solid #1F2937;
-      filter: grayscale(15%);
-    }
-
-    .operating-loop {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #6B7280;
-      margin-top: 2.5rem;
-    }
-
-    .principles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-top: 1.75rem;
-    }
-
-    .principle {
-      padding: 2rem;
-      border: 1px solid #1F2937;
-      border-radius: 12px;
-    }
-
-    .principle-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      color: #4B5563;
-      margin-bottom: 1rem;
-    }
-
-    .principle-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.35rem;
-      color: var(--chalk);
-      margin-bottom: 0.75rem;
-      line-height: 1.2;
-    }
-
-    .principle-body {
-      font-size: 0.88rem;
-      color: #9CA3AF;
-      line-height: 1.7;
-    }
-
-    /* CREDENTIALS */
-    .creds-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 2.5rem;
-    }
-
-    .cred-item {
-      padding: 1.25rem 1.5rem;
-      background: var(--white);
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-    }
-
-    .cred-issuer {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: 0.35rem;
-    }
-
-    .cred-name {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--ink);
-      line-height: 1.3;
-    }
-
-    .cred-year {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--slate);
-      margin-top: 0.35rem;
-    }
-
-    /* TOOLS */
-    .tools-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 2rem;
-    }
-
-    .tool-tag {
-      padding: 0.35rem 0.85rem;
-      background: var(--chalk);
-      border: 1px solid var(--rule);
-      border-radius: 999px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      color: var(--ink);
-    }
-
-    .tool-tag-secondary {
-      background: transparent;
-      border: 1px solid var(--rule);
-      color: var(--slate);
-      font-size: 0.68rem;
-    }
-
-    .subsection-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .contact-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-
-    .contact-photo-wrap {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .contact-photo {
-      width: 100%;
-      max-width: 300px;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: center 15%;
-      border-radius: 12px;
-      filter: grayscale(8%);
-    }
-
-    .contact-heading {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      max-width: 14ch;
-    }
-
-    .contact-sub {
-      font-size: 0.95rem;
-      color: var(--slate);
-      max-width: 44ch;
-      line-height: 1.7;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
-      background: var(--ink);
-      color: var(--chalk);
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .btn-primary:hover { opacity: 0.8; }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
-      background: transparent;
-      color: var(--ink);
-      border: 1.5px solid var(--ink);
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .btn-secondary:hover {
-      background: var(--ink);
-      color: var(--chalk);
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 2rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer-copy {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      color: var(--slate);
-    }
-
-    .footer-clearance {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-    }
-
-    .clearance-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #22c55e;
-    }
-
-    /* DIVIDER */
-    .full-rule {
-      border: none;
-      border-top: 1px solid var(--rule);
-      margin: 0 2.5rem;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.25rem; }
-      .nav-links { display: none; }
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 6rem 1.25rem 4rem;
-      }
-      .hero-photo-wrap { display: none; }
-      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .contact-photo-wrap { justify-content: flex-start; order: 2; }
-      .contact-photo { max-width: 220px; }
-      .about-grid { grid-template-columns: 1fr; gap: 1.75rem; }
-      .about-photo-wrap { justify-content: flex-start; }
-      .about-photo { max-width: 280px; }
-      .craft-header { grid-template-columns: 1fr; gap: 1.5rem; }
-      .craft-photo-wrap { justify-content: flex-start; }
-      .craft-photo { max-width: 200px; }
-      .operating-loop { font-size: 0.68rem; letter-spacing: 0.03em; }
-      section { padding: 4rem 1.25rem; }
-      .craft-inner { padding: 0 1.25rem; }
-      footer { padding: 1.5rem 1.25rem; flex-direction: column; gap: 1rem; text-align: center; }
-      .full-rule { margin: 0 1.25rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .pulse::after, .status-dot::after { animation: none; }
-    }
-  </style>
+  <link rel="preload" as="image" href="Assets/jp-hero.jpg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- NAV -->
-  <nav>
-    <a class="nav-mark" href="#">JP</a>
-    <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#craft">Craft</a></li>
-      <li><a href="#credentials">Credentials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav aria-label="Primary">
+    <a class="nav-mark" href="./">JP</a>
+    <div class="nav-right">
+      <a class="nav-lc-mobile" href="local-cosmos/">Local Cosmos</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="local-cosmos/" class="nav-lc">Local Cosmos</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
+
+  <main id="main">
 
   <!-- HERO -->
   <div style="max-width:1200px;margin:0 auto;">
-    <div class="hero">
+    <header class="hero">
       <div class="hero-content">
-        <p class="hero-eyebrow">Jerome Patrick — Fredericksburg, VA</p>
-        <h1 class="hero-name">Civic AI<br>Product Builder.</h1>
-        <p class="hero-thesis">
-          I find messy, real-world problems, understand the systems underneath them,
-          and build working products with service design, AI, data, and rapid prototyping.
+        <img class="hero-avatar" src="Assets/jp-hero.jpg" alt="" width="72" height="72" />
+        <p class="hero-identity">
+          <strong>Jerome Patrick Jr.</strong><span class="sep">/</span><span class="id-role">Founder, Local Cosmos</span><span class="id-dot"> · </span><span class="id-role">Civic Product Architect</span>
         </p>
-        <div class="hero-pills">
-          <a href="https://story-goggles--jeromepatrickjr.replit.app/" target="_blank" class="pill pill-grape">
-            <span class="pulse"></span> StoryGoggles — Live
+        <h1 class="hero-headline">I design systems for better <em>local life.</em></h1>
+        <p class="hero-thesis v2">
+          I'm Jerome Patrick Jr. — a Civic Product Architect and founder of Local Cosmos.
+          I work across design, technology, AI, and community to build products and systems
+          that help local economies work better.
+        </p>
+        <div class="hero-cta">
+          <a href="local-cosmos/" class="btn-primary">
+            Explore Local Cosmos
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
           </a>
-          <a href="https://www.trukfoo.com" target="_blank" class="pill pill-rust">
-            <span class="pulse"></span> Trukfoo — In Production
-          </a>
-          <a href="#contact" class="pill pill-outline">Open to AI + Product Work</a>
+          <a href="#work" class="btn-secondary">View My Work</a>
+          <a href="https://linkedin.com/in/jeromepatrickjr" target="_blank" rel="noopener" class="text-link">Connect on LinkedIn ↗</a>
         </div>
       </div>
       <div class="hero-photo-wrap">
         <img
           class="hero-photo"
-          src="JeromePatrickNewProfilepic.png"
-          alt="Jerome Patrick"
+          src="Assets/jp-hero.jpg"
+          alt="Portrait of Jerome Patrick Jr."
+          width="340" height="420"
+          fetchpriority="high"
         />
       </div>
-    </div>
+    </header>
   </div>
+
+  <!-- SIGNAL -->
+  <div class="signal" role="note" aria-label="Design, Technology, Local Economies">
+    <p class="signal-inner" aria-hidden="true">
+      <span>Design</span><span class="signal-x">×</span><span>Technology</span><span class="signal-x">×</span><span>Local Economies</span>
+    </p>
+  </div>
+
+  <!-- CURRENTLY BUILDING -->
+  <section id="building" aria-labelledby="building-title">
+    <p class="section-label">Currently Building</p>
+    <div class="building-grid">
+      <div>
+        <h2 class="building-name" id="building-title">Local Cosmos</h2>
+        <p class="building-descriptor">An activation company for local economies.</p>
+        <div class="building-body">
+          <p>
+            Local communities generate enormous amounts of information — businesses, events,
+            destinations, organizations, amenities, culture, and activity — but that information
+            is fragmented across websites, spreadsheets, social media, databases, and people's heads.
+          </p>
+          <p>
+            Local Cosmos is exploring a better <strong>local information infrastructure</strong>:
+            systems that help communities understand what's happening, keep information current,
+            improve discovery, and activate their local economies.
+          </p>
+        </div>
+        <a href="local-cosmos/" class="btn-primary">
+          Explore Local Cosmos
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+
+      <figure class="eco">
+        <figcaption class="eco-caption">How the ecosystem fits together</figcaption>
+        <div class="eco-umbrella">
+          <span class="eco-umbrella-name">Local Cosmos</span>
+          <span class="eco-tier-label">Umbrella</span>
+        </div>
+        <div class="eco-link" aria-hidden="true"></div>
+        <div class="eco-core">
+          <div class="eco-core-top">
+            <span class="eco-core-name">LOIS</span>
+            <span class="eco-tier-label">Intelligence layer</span>
+          </div>
+          <p class="eco-core-role">Local intelligence</p>
+          <p class="eco-core-desc">The Local Operating Information System — for collecting, verifying, organizing, connecting, and activating local information.</p>
+        </div>
+        <div class="eco-link" aria-hidden="true"></div>
+        <div class="eco-branches">
+          <a class="eco-leaf" href="https://festivefly.com" target="_blank" rel="noopener"><p class="eco-leaf-name coral">FestiveFly</p><p class="eco-leaf-role">Local discovery</p></a>
+          <a class="eco-leaf" href="https://pullupguide.com" target="_blank" rel="noopener"><p class="eco-leaf-name">Pull Up</p><p class="eco-leaf-role">Local media</p></a>
+          <a class="eco-leaf" href="https://www.trukfoo.com" target="_blank" rel="noopener"><p class="eco-leaf-name rust">Trukfoo</p><p class="eco-leaf-role">Local food</p></a>
+        </div>
+        <div class="eco-foot"><span class="eco-tier-label">Experiences &amp; activation layers</span></div>
+      </figure>
+    </div>
+  </section>
 
   <hr class="full-rule" />
 
   <!-- WORK -->
   <section id="work">
-    <p class="section-label">Work</p>
-    <h2 class="section-heading">Live projects.<br>Real stakes.</h2>
+    <p class="section-label">Selected Work</p>
+    <h2 class="section-heading">Things I've built.</h2>
     <p class="work-intro">
-      Not case studies — products, systems, and prototypes at different stages
-      of the same process: discovered, designed, built, and put into the real world.
+      Products, systems, and prototypes at different stages of the same process —
+      discovered, designed, built, and put into the real world.
     </p>
 
     <div class="projects-grid">
@@ -850,7 +179,7 @@
             <span class="stat-label">Shipped</span>
           </div>
         </div>
-        <a href="https://story-goggles--jeromepatrickjr.replit.app/" target="_blank" class="card-link">
+        <a href="https://story-goggles--jeromepatrickjr.replit.app/" target="_blank" rel="noopener" class="card-link">
           Visit storygoggles.com
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M3 8h10M9 4l4 4-4 4"/>
@@ -863,7 +192,7 @@
         <div class="card-top">
           <span class="card-status"><span class="status-dot"></span> In Production</span>
           <span class="card-type">Marketplace · Startup</span>
-          <span class="local-cosmos-tag">Part of Local Cosmos</span>
+          <a href="local-cosmos/" class="local-cosmos-tag">Part of Local Cosmos →</a>
         </div>
         <h3 class="card-name rust">Trukfoo</h3>
         <p class="card-desc">
@@ -886,27 +215,58 @@
             <span class="stat-label">Founded</span>
           </div>
         </div>
-        <a href="https://www.trukfoo.com" target="_blank" class="card-link">
+        <a href="https://www.trukfoo.com" target="_blank" rel="noopener" class="card-link">
           Visit trukfoo.com
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M3 8h10M9 4l4 4-4 4"/>
           </svg>
         </a>
-        <a href="https://www.thelaunchplace.org/ideafest" target="_blank" class="card-source-link">
+        <a href="https://www.thelaunchplace.org/ideafest" target="_blank" rel="noopener" class="card-source-link">
           Featured: IdeaFest 2026 Finalist ↗
         </a>
       </div>
 
-      <!-- LOIS -->
+      <!-- USPS Passport -->
+      <div class="project-card">
+        <div class="card-top">
+          <span class="card-status"><span class="status-dot"></span> Prototyped</span>
+          <span class="card-type">Service Design · Federal</span>
+        </div>
+        <h3 class="card-name">USPS Passport Service Redesign</h3>
+        <p class="card-desc">
+          Evaluated the USPS passport appointment service end to end. Developed current-state
+          and future-state service maps that identified friction across scheduling, mobile usability,
+          and error recovery. Prototyped redesigned workflows and facilitated stakeholder review
+          sessions with business, IT, and customer-facing teams to validate improvements.
+        </p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-number" style="font-size:1.1rem;">Current → Future</span>
+            <span class="stat-label">Service Mapping</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" style="font-size:1.1rem;">HCD · Salesforce</span>
+            <span class="stat-label">Methods</span>
+          </div>
+        </div>
+        <a href="https://chat-check-78201000.figma.site" target="_blank" rel="noopener" class="card-link">
+          Open the live prototype
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+
+<!-- LOIS -->
       <div class="project-card">
         <div class="card-top">
           <span class="card-status"><span class="status-dot"></span> In Development</span>
           <span class="card-type">AI · Local Intelligence</span>
-          <span class="local-cosmos-tag">Part of Local Cosmos</span>
+          <a href="local-cosmos/" class="local-cosmos-tag">Part of Local Cosmos →</a>
         </div>
         <h3 class="card-name teal">LOIS</h3>
         <p class="card-desc">
-          The Local Operating Intelligence System — the data and AI infrastructure at the
+          The Local Operating Information System — the data and AI infrastructure at the
           center of Local Cosmos, a local-discovery ecosystem connecting communities to
           events, businesses, and experiences. LOIS pairs AI-driven collection with
           on-the-ground "Localist" relationships to surface information algorithms alone miss.
@@ -925,7 +285,7 @@
             <span class="stat-label">Founded</span>
           </div>
         </div>
-        <a href="https://meetlois.com" target="_blank" class="card-link">
+        <a href="https://meetlois.com" target="_blank" rel="noopener" class="card-link">
           Visit meetlois.com
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M3 8h10M9 4l4 4-4 4"/>
@@ -938,7 +298,7 @@
         <div class="card-top">
           <span class="card-status"><span class="status-dot"></span> In Development</span>
           <span class="card-type">Civic SaaS · Event Discovery</span>
-          <span class="local-cosmos-tag">Part of Local Cosmos</span>
+          <a href="local-cosmos/" class="local-cosmos-tag">Part of Local Cosmos →</a>
         </div>
         <h3 class="card-name coral">FestiveFly</h3>
         <p class="card-desc">
@@ -961,7 +321,7 @@
             <span class="stat-label">Founded</span>
           </div>
         </div>
-        <a href="https://festivefly.com" target="_blank" class="card-link">
+        <a href="https://festivefly.com" target="_blank" rel="noopener" class="card-link">
           Visit festivefly.com
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M3 8h10M9 4l4 4-4 4"/>
@@ -996,48 +356,18 @@
             <span class="stat-label">Founded</span>
           </div>
         </div>
-        <a href="https://www.figma.com/proto/EGLJyu5QvZWKGARqYnJpxQ/CustoBee?node-id=277-3310&starting-point-node-id=277%3A3310" target="_blank" class="card-link">
+        <a href="https://www.figma.com/proto/EGLJyu5QvZWKGARqYnJpxQ/CustoBee?node-id=277-3310&starting-point-node-id=277%3A3310" target="_blank" rel="noopener" class="card-link">
           Open the live prototype
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M3 8h10M9 4l4 4-4 4"/>
           </svg>
         </a>
-        <a href="https://www.hofstra.edu/entrepreneurship/veterans-venture-challenge.html" target="_blank" class="card-source-link">
+        <a href="https://www.hofstra.edu/entrepreneurship/veterans-venture-challenge.html" target="_blank" rel="noopener" class="card-source-link">
           Featured: Hofstra Veterans Venture Challenge ↗
         </a>
       </div>
 
-      <!-- USPS Passport -->
-      <div class="project-card">
-        <div class="card-top">
-          <span class="card-status"><span class="status-dot"></span> Prototyped</span>
-          <span class="card-type">Service Design · Federal</span>
-        </div>
-        <h3 class="card-name">USPS Passport Service Redesign</h3>
-        <p class="card-desc">
-          Evaluated the USPS passport appointment service end to end. Developed current-state
-          and future-state service maps that identified friction across scheduling, mobile usability,
-          and error recovery. Prototyped redesigned workflows and facilitated stakeholder review
-          sessions with business, IT, and customer-facing teams to validate improvements.
-        </p>
-        <div class="card-stats">
-          <div class="stat">
-            <span class="stat-number" style="font-size:1.1rem;">Current → Future</span>
-            <span class="stat-label">Service Mapping</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" style="font-size:1.1rem;">HCD · Salesforce</span>
-            <span class="stat-label">Methods</span>
-          </div>
-        </div>
-        <a href="https://chat-check-78201000.figma.site" target="_blank" class="card-link">
-          Open the live prototype
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
-        </a>
-      </div>
-
+      
     </div>
   </section>
 
@@ -1050,25 +380,26 @@
     <div class="about-grid">
       <div class="about-body">
         <p>
+          I'm a multidisciplinary product thinker, designer, strategist, and builder
+          interested in how technology can improve everyday systems.
+        </p>
+        <p>
           I learned early in the Navy to look beyond the immediate problem and understand
-          the system around it. That instinct followed me into service design, where I
-          became interested not only in what people experience, but in the operations,
-          relationships, and decisions creating that experience.
+          the system around it. That instinct has followed me across product design,
+          service design, AI, civic technology, community, branding, and entrepreneurship.
         </p>
         <p>
-          Over time, understanding the system naturally led to building. I wanted to
-          carry the work further — from discovery and design into products that could
-          be tested in the real world.
+          I'm particularly interested in the layer where digital systems meet real human
+          behavior — where better information, better interfaces, and better infrastructure
+          can improve how people experience the places around them.
         </p>
         <p>
-          AI has expanded what I can prototype, build, and test directly, shortening
-          the distance between an idea and something people can actually use. The
-          throughline is still the same: understand how complicated things work, then
-          make them work better for the people inside them.
+          Today I'm building <a href="local-cosmos/" style="color:inherit;text-underline-offset:4px;">Local Cosmos</a>
+          and exploring what the next generation of local technology might look like.
         </p>
       </div>
       <div class="about-photo-wrap">
-        <img src="Assets/jp-navy.jpg" alt="Jerome Patrick holding his Navy retirement shadow box, 22 years of service" class="about-photo" />
+        <img src="Assets/jp-navy.jpg" alt="Jerome Patrick holding his Navy retirement shadow box, 22 years of service" class="about-photo" width="880" height="660" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>
@@ -1082,7 +413,7 @@
           <h2 class="section-heading">How I work.</h2>
         </div>
         <div class="craft-photo-wrap">
-          <img src="Assets/jp-at-work.jpg" alt="Jerome Patrick at his desk, working" class="craft-photo" />
+          <img src="Assets/jp-at-work.jpg" alt="Jerome Patrick at his desk, working" class="craft-photo" width="732" height="958" loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -1214,30 +545,50 @@
     <p class="section-label">Contact</p>
     <div class="contact-grid">
       <div class="contact-wrap">
-        <h2 class="contact-heading">Let's build something worth using.</h2>
+        <h2 class="contact-heading">Let's build something useful.</h2>
         <p class="contact-sub">
-          I'm interested in AI products, civic technology, service systems,
-          and complicated real-world problems that need more than another slide deck.
+          Whether we just met or you're working on something in local economies,
+          civic technology, or AI products — I'd like to hear about it.
         </p>
         <div class="contact-links">
-          <a href="mailto:jeromepatrickjr@gmail.com" class="btn-primary">
-            Send an email
-          </a>
-          <a href="https://linkedin.com/in/jeromepatrickjr" target="_blank" class="btn-secondary">
-            LinkedIn
-          </a>
+          <a href="mailto:jeromepatrickjr@gmail.com" class="btn-primary">Send an email</a>
+          <a href="https://linkedin.com/in/jeromepatrickjr" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
+          <a href="https://github.com/jpatrickjr" target="_blank" rel="noopener" class="btn-secondary">GitHub</a>
         </div>
+        <p class="contact-email"><a href="mailto:jeromepatrickjr@gmail.com">jeromepatrickjr@gmail.com</a></p>
       </div>
       <div class="contact-photo-wrap">
-        <img src="Assets/jp-contact.jpg" alt="Jerome Patrick smiling" class="contact-photo" />
+        <img src="Assets/jp-contact.jpg" alt="Jerome Patrick smiling" class="contact-photo" width="856" height="1137" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <p class="footer-copy">© 2026 Jerome Patrick Jr. · jpatrickjr.com</p>
+    <ul class="footer-links">
+      <li><a href="local-cosmos/">Local Cosmos</a></li>
+      <li><a href="https://linkedin.com/in/jeromepatrickjr" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/jpatrickjr" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
   </footer>
 
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var list = document.getElementById('nav-links');
+      if (!btn || !list) return;
+      function setOpen(open) {
+        list.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Close' : 'Menu';
+      }
+      btn.addEventListener('click', function () { setOpen(!list.classList.contains('open')); });
+      list.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    })();
+  </script>
 </body>
 </html>
